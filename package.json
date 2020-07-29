@@ -29,10 +29,11 @@
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.19.0",
     "mocha": "^7.1.2",
     "nyc": "^15.0.1",
     "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
