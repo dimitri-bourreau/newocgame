@@ -29,26 +29,28 @@
       </div>
     </div>
 
-    <div id="game-wrapper" class="d-none d-md-block">
-      <aside id="player-1" class="player-aside">
-        <img src="/public/images/pesquet.png" alt="Thomas Pesquet" />
-        <p>Player 1</p>
+    <div id="game-wrapper" class="d-none d-md-block container">
+      <div class="row">
+        <aside id="player-1" class="player-aside col-md-3">
+          <img src="/public/images/pesquet.png" alt="Thomas Pesquet" />
+          <p>Player 1</p>
 
-        <div id="player-stats"></div>
-      </aside>
+          <div id="player-stats"></div>
+        </aside>
 
-      <div id="title-and-board">
-        <h1>OC Game</h1>
+        <div id="title-and-board" class="col-md-6">
+          <h1>OC Game</h1>
 
-        <div id="board-game"></div>
+          <div id="board-game"></div>
+        </div>
+
+        <aside id="player-2" class="player-aside col-md-3">
+          <img src="../public/images/bauer.png" alt="Jack Bauer" />
+          <p>Player 1</p>
+
+          <div id="player-stats"></div>
+        </aside>
       </div>
-
-      <aside id="player-2" class="player-aside">
-        <img src="../public/images/bauer.png" alt="Jack Bauer" />
-        <p>Player 1</p>
-
-        <div id="player-stats"></div>
-      </aside>
     </div>
 
     <script
