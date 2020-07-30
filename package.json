@@ -4,7 +4,7 @@
   "description": "Template for a Node project.",
   "main": "index.js",
   "scripts": {
-    "server": "node ./src/app.js",
+    "server": "./node_modules/.bin/nodemon ./src/app.js",
     "test": "./node_modules/.bin/nyc -R spec --reporter=lcov --exclude '**/*.spec.js' ./node_modules/.bin/_mocha './{,!(node_modules)/**}/*.spec.js'",
     "sass-watch": "./node_modules/.bin/sass --watch ./src/styles/main.scss ./src/styles/style.min.css --no-source-map --trace --style compressed"
   },
@@ -31,6 +31,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
     "mocha": "^7.1.2",
+    "nodemon": "^2.0.4",
     "nyc": "^15.0.1",
     "sass": "^1.26.10"
   },
