@@ -1,3 +1,5 @@
 import { BoardGame } from './classes/boardGame.mjs';
 
-console.log(new BoardGame());
+const board = new BoardGame();
+
+board.initiateBoardGame('board-game');

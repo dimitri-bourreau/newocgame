@@ -1,0 +1,19 @@
+#board-game {
+    /* DOM elt used to append javascript computed board game */
+
+    #computed-board {
+        border: 2px solid lightgrey;
+        background-color: red;
+        min-width: 100%;
+        min-height: 500px;
+        display: block;
+
+        // .board-row {
+
+        // }
+
+        .board-square {
+            border: 1px solid lightgoldenrodyellow;
+        }
+    }
+}
