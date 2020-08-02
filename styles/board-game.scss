@@ -1,19 +1,18 @@
-#board-game {
-    /* DOM elt used to append javascript computed board game */
+// #board-game {
+//     /* DOM elt used to append javascript computed board game */
+// }
 
-    #computed-board {
-        border: 2px solid red;
-        background-color: red;
-        min-width: 100%;
-        min-height: 500px;
-        display: block;
+#computed-board {
+    border: 2px solid lightgrey;
+    min-width: 100%;
+    min-height: 500px;
+    display: block;
 
-        // .board-row {
+    // .board-row {
 
-        // }
+    // }
 
-        .board-square {
-            border: 1px solid lightgoldenrodyellow;
-        }
+    .board-square {
+        border: 1px solid lightgrey;
     }
 }

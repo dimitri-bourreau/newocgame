@@ -6,7 +6,7 @@
   "scripts": {
     "server": "./node_modules/.bin/nodemon ./app.js",
     "test": "./node_modules/.bin/nyc -R spec --reporter=lcov --exclude '**/*.spec.js' ./node_modules/.bin/_mocha './{,!(node_modules)/**}/*.spec.js'",
-    "sass-watch": "./node_modules/.bin/sass --watch ./styles/main.scss ./styles/style.min.css --no-source-map --trace --style compressed"
+    "sass-watch": "./node_modules/.bin/sass --watch ./styles/main.scss ./public/style.min.css --no-source-map --trace --style compressed"
   },
   "repository": {
     "type": "git",
