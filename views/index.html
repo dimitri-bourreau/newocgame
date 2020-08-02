@@ -9,7 +9,7 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/public/style.min.css">
+    <link rel="stylesheet" href="/public/style.min.css" />
     <title>OC Game</title>
   </head>
   <body>
@@ -86,6 +86,65 @@
 
         <div id="title-and-board" class="col-md-8 text-center">
           <div id="board-game"></div>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-info mt-3"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            Paramètres du jeu
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Paramètres du jeu
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5>Recommencer la partie</h5>
+                  <a href="#" id="restart-game-btn" class="btn btn-light"
+                    >Recommencer la partie et perdre la partie en cours</a
+                  >
+
+                  <h5 class="mt-4">Changer la taille du plateau de jeu</h5>
+                  <p>La partie recommancera</p>
+                  <a href="/5x5" class="btn btn-light">5 x 5</a>
+                  <a href="/10x10" class="btn btn-light">10 x 10</a>
+                  <a href="/15x15" class="btn btn-light">15 x 15</a>
+                  <a href="/20x20" class="btn btn-light">20 x 20</a>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-dismiss="modal"
+                  >
+                    Annuler
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <aside id="player-2" class="player-aside col-md-2 card px-0">

@@ -6,9 +6,8 @@ class BoardGame {
   }
 
   initiateBoardGame(id) {
-    if (typeof id !== 'string') throw new Error('id must be string');
-
-    const domElt = document.getElementById(id);
+    const eltId = this.checkID(id);
+    const domElt = document.getElementById(eltId);
     let boardGame = document.createElement('div');
     boardGame.id = 'computed-board';
     boardGame.classList.add('container');
@@ -32,6 +31,11 @@ class BoardGame {
     }
 
     return domElt.append(boardGame);
+  }
+
+  checkID(id) {
+    if (typeof id !== 'string') throw new Error('id must be string');
+    return id;
   }
 }
 
