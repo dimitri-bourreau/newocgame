@@ -10,10 +10,15 @@
       <div class="row">
         <% const player1 = { id: 'player-1', image: 'pesquet.png', name: 'Joueur 1', turn: true } %>
         <% const player2 = { id: 'player-2', image: 'bauer.png', name: 'Joueur 2', turn: false } %>
+
         <%- include('../partials/player-aside', player1) %>
 
         <div id="title-and-board" class="col-md-8 text-center mb-5">
-          <div id="board-game"></div>
+          <div id="board-game">
+            <% const specificDimensions = (typeof width !== 'undefined' && typeof height !== 'undefined') %>
+            <% const dimensions = specificDimensions ? { width, height } : { width: 10, height: 10 } %>
+            <%- include('../partials/board-game', dimensions) %>
+          </div>
 
           <%- include('../partials/modal') %>
         </div>

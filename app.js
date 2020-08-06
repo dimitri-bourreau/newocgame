@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 
+const { checkWidthAndHeight } = require('./helpers/in-url-board-game-dimensions');
+
 const app = express();
 const port = process.env.port || 3000;
 
@@ -29,10 +31,3 @@ app.listen(port, () =>
   console.log(`App listening at http://localhost:${port}`)
 );
 
-function checkWidthAndHeight(width, length) {
-  const allowedValues = [5, 10, 15, 20];
-  if (allowedValues.includes(width) && allowedValues.includes(length)) {
-    return true;
-  }
-  return false;
-}
