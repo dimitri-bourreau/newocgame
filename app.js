@@ -17,8 +17,8 @@ app.get('/:width?/:length?', (req, res, next) => {
   ) {
     const { width, length } = req.params;
     const valuesPasses = checkWidthAndHeight(width, length);
-    if (!valuesPasses) return next();
-    return res.render('pages/index', { width, length });
+    if (valuesPasses) return res.render('pages/index', { width, length });
+    return next();
   }
   return res.render('pages/index');
 });
