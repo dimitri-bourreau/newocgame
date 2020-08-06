@@ -8,9 +8,10 @@
 
     <div id="game-wrapper" class="container d-none d-md-block mt-5">
       <div class="row">
-        <% const player1 = { %> <% id: 'player-1', 'pesquet.png', 'Joueur
-        1','true' %> <% } %> <%- include('../partials/player-aside', player1 );
-        %>
+        <% const player1 = { %>
+          <% id: 'player-1', 'pesquet.png', 'Joueur 1','true' %>
+        <% }; %>
+        <%- include('../partials/player-aside', player1 ); %>
 
         <div id="title-and-board" class="col-md-8 text-center mb-5">
           <div id="board-game"></div>
