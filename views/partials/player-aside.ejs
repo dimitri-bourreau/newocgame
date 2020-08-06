@@ -40,7 +40,10 @@
         </ul>
       </div>
 
-      <div id="player-1-action" class="card mt-4 text-center bg-primary">
+      <div 
+        id="player-1-action" 
+        class="card mt-4 text-center <%- turn ? 'bg-primary' : 'bg-secondary' %>"
+      >
         <div class="card-body">
           <% if (turn) { %>
             <p class="text-light mb-0">Vous pouvez vous déplacer</p>
