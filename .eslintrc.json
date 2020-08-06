@@ -4,7 +4,7 @@
     "es2020": true,
     "node": true
   },
-  "extends": ["prettier", "airbnb"],
+  "extends": ["prettier", "airbnb-base/legacy"],
   "plugins": ["prettier", "ejs"],
   "parserOptions": {
     "ecmaVersion": 11,
