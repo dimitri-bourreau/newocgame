@@ -11,7 +11,7 @@
     >
       <% for (let squareIndex = 1 ; squareIndex <= width ; squareIndex += 1) { %>
         <div 
-          class="board-square y-<%- squareIndex %>"
+          class="board-square x-<%- rowIndex %> y-<%- squareIndex %>"
           style="min-width: <%- 100 / width %>% ; min-height: <%- rowHeight %>px"
         ></div>
       <% } %>
