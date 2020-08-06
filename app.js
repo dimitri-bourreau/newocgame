@@ -10,14 +10,14 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.get('/:width?/:length?', (req, res, next) => {
+app.get('/:width?/:height?', (req, res, next) => {
   if (
     typeof req.params.width !== 'undefined' &&
-    typeof req.params.length !== 'undefined'
+    typeof req.params.height !== 'undefined'
   ) {
-    const { width, length } = req.params;
-    const valuesPasses = checkWidthAndHeight(width, length);
-    if (valuesPasses) return res.render('pages/index', { width, length });
+    const { width, height } = req.params;
+    const valuesPasses = checkWidthAndHeight(width, height);
+    if (valuesPasses) return res.render('pages/index', { width, height });
     return next();
   }
   return res.render('pages/index');

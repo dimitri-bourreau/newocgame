@@ -1,2 +1,20 @@
 <%# Needed param: dimension = { width, height } %>
-<% console.log( width, height); %>
+
+<% const globalHeightInPx = 700; %>
+<% const rowHeight =  globalHeightInPx / height; %>
+
+<div id="computed-board" class="container p-0">
+  <% for (let rowIndex = 1 ; rowIndex <= height ; rowIndex += 1) { %>
+    <div 
+      class="container m-0 p-0 board-row row x-<%- rowIndex %>" 
+      style="min-height: <%- rowHeight %>px"
+    >
+      <% for (let squareIndex = 1 ; squareIndex <= width ; squareIndex += 1) { %>
+        <div 
+          class="board-square y-<%- squareIndex %>"
+          style="min-width: <%- 100 / width %>% ; min-height: <%- rowHeight %>px"
+        ></div>
+      <% } %>
+    </div>
+  <% } %>
+</div>
