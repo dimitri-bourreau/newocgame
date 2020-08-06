@@ -24,7 +24,7 @@ app.get('/:width?/:height?', (req, res, next) => {
 });
 
 app.use(function (req, res) {
-  return res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+  return res.status(404).sendFile(path.join(__dirname, 'views', 'pages', '404.html'));
 });
 
 app.listen(port, () =>
