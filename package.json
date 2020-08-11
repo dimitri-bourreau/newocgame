@@ -4,9 +4,9 @@
   "description": "Template for a Node project.",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon ./app.js",
-    "test": "./node_modules/.bin/nyc -R spec --reporter=lcov --exclude '**/*.spec.js' ./node_modules/.bin/_mocha './{,!(node_modules)/**}/*.spec.js'",
-    "sass-watch": "./node_modules/.bin/sass --watch ./styles/main.scss ./public/style.min.css --no-source-map --trace --style compressed"
+    "start": "./node_modules/.bin/nodemon ./src/app.js",
+    "test": "./node_modules/.bin/nyc -R spec --reporter=lcov --exclude './src/**/*.spec.js' ./node_modules/.bin/_mocha './{,!(node_modules)/**}/*.spec.js'",
+    "sass-watch": "./node_modules/.bin/sass --watch ./src/styles/main.scss ./src/public/style.min.css --no-source-map --trace --style compressed"
   },
   "repository": {
     "type": "git",
