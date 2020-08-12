@@ -14,14 +14,25 @@ function getRandomPosition(width, height) {
   };
 }
 
-function positionFits(position, positions) {
-  if (positions.includes(position)) return false;
-  positions.forEach((registeredPosition) => {
-    const sameY = registeredPosition.y === position.y;
-    const sameX = registeredPosition.x === position.x;
-    if (sameX && sameY) return false;
+function positionFits(position, blackSquaresPositions) {
+  let result = true;
+  blackSquaresPositions.forEach((blackPos) => {
+    const unavailableSquares = [
+      { y: blackPos.y, x: blackPos.x },
+      { y: blackPos.y - 1, x: blackPos.x },
+      { y: blackPos.y - 1, x: blackPos.x + 1 },
+      { y: blackPos.y, x: blackPos.x + 1 },
+      { y: blackPos.y + 1, x: blackPos.x + 1 },
+      { y: blackPos.y + 1, x: blackPos.x },
+      { y: blackPos.y + 1, x: blackPos.x - 1 },
+      { y: blackPos.y, x: blackPos.x - 1 },
+      { y: blackPos.y - 1, x: blackPos.x - 1 },
+    ]; // already blacked square, it's top then clockwise
+    unavailableSquares.forEach((pos) => {
+      if (pos.y === position.y && pos.x === position.x) result = false;
+    });
   });
-  return true;
+  return result;
 }
 
 function defineWhichSquareToGetBlack(howMany, { width, height }) {
@@ -43,9 +54,11 @@ function defineWhichSquareToGetBlack(howMany, { width, height }) {
 function setTheseSquaresBlack(refs) {
   refs.forEach(({ x, y }) => {
     const row = [...document.getElementsByClassName(`x-${x}`)];
-    const square = row.filter(domSquare => domSquare.classList.contains(`y-${y}`));
+    const square = row.filter((domSquare) =>
+      domSquare.classList.contains(`y-${y}`)
+    );
     square[0].classList.add('bg-dark');
-  })
+  });
 }
 
 function makeSomeSquaresBlack(dimensions) {
