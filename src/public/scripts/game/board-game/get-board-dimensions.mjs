@@ -1,5 +1,8 @@
 function getNumberFromString(string) {
-  return string.split('').filter((elt) => /^\d+$/.test(elt));
+  return string
+    .split('')
+    .filter((elt) => /^\d+$/.test(elt))
+    .join('');
 }
 
 function getHeightOfBoard(board) {
@@ -17,7 +20,6 @@ function getWidthOfBoard(board) {
   const squareNumber = getNumberFromString(squareRef[0]);
   return parseInt(squareNumber, 10);
 }
-
 
 function getBoardDimensions() {
   const board = document.getElementById('computed-board');
