@@ -15,7 +15,7 @@ function getRandomPosition(width, height) {
 }
 
 function positionFits(position, blackSquaresPositions) {
-  let result = true;
+  let forbiddenPositions = [];
   blackSquaresPositions.forEach((blackPos) => {
     const unavailableSquares = [
       { y: blackPos.y, x: blackPos.x },
@@ -29,17 +29,18 @@ function positionFits(position, blackSquaresPositions) {
       { y: blackPos.y - 1, x: blackPos.x - 1 },
     ]; // already blacked square, it's top then clockwise
     unavailableSquares.forEach((pos) => {
-      if (pos.y === position.y && pos.x === position.x) result = false;
+      if (pos.y === position.y && pos.x === position.x)
+        forbiddenPositions.push(pos);
     });
   });
-  return result;
+  return forbiddenPositions.length > 1 ? false : true;
 }
 
 function defineWhichSquareToGetBlack(howMany, { width, height }) {
   let positions = [];
   for (let square = 1; square <= howMany; square += 1) {
     if (square === 1) {
-      positions.push(getRandomPosition(width, height));
+      positions.push(getRandomPosition(width, height)); // first square
     } else {
       let position = getRandomPosition(width, height);
       while (!positionFits(position, positions)) {
