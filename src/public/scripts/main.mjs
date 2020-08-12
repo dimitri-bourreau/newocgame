@@ -1,4 +1,5 @@
-import { initiateBoardGame } from './game/initiate-board.mjs';
+import { initiateBoardGame } from './game/initiate-board.mjs';
+import { initiatePlayers } from './game/initiate-players.mjs';
 import { initiateWeapons } from './game/initiate-weapons.mjs';
 import { listenToResetBtn } from './game/reset-game.mjs';
 
