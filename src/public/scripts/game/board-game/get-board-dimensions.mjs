@@ -10,7 +10,7 @@ function getHeightOfBoard(board) {
   const classNames = [...lastElementChild.classList];
   const rowRef = classNames.filter((row) => /^x/.test(row));
   const rowNumber = getNumberFromString(rowRef[0]);
-  return parseInt(rowNumber[0], 10);
+  return parseInt(rowNumber, 10);
 }
 
 function getWidthOfBoard(board) {
