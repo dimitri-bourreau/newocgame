@@ -1,5 +1,0 @@
-class BoardGame {
-  
-}
-
-export { BoardGame };
