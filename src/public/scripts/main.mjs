@@ -5,3 +5,4 @@ import { listenToResetBtn } from './game/reset-game.mjs';
 listenToResetBtn('restart-game-btn');
 initiateBoardGame();
 const weapons = initiateWeapons();
+const players = initiatePlayers(weapons);
