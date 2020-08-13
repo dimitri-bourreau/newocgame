@@ -17,6 +17,8 @@ class Player {
     playerImage.src = `/public/images/${this.picture}`;
     playerImage.alt = this.name;
     playerHealth.innerHTML = this.health;
+    playerHealth.setAttribute('aria-valuenow', this.health.toString());
+    playerHealth.style.width = `${this.health}%`;
   }
 };
 
