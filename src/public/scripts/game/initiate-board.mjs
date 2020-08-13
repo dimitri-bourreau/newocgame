@@ -6,13 +6,9 @@ function drawBoard() {
   makeSomeSquaresBlack(dimensions);
 }
 
-function insertPlayers({ player1, player2 }) {
-  console.log(player1, player2);
-}
-
 function initiateBoardGame(players) {
   drawBoard();
-  insertPlayers(players);
+  Object.keys(players).forEach((key) => players[key].insertDataInDom());
 }
 
 export { initiateBoardGame };
