@@ -34,7 +34,7 @@
               alt="Poing"
             />
           </li>
-          <li class="list-group-item">Poing: 10 dégâts</li>
+          <li class="list-group-item weapon-name-damage">Poing: 10 dégâts</li>
         </ul>
       </div>
 
@@ -43,11 +43,8 @@
         class="card mt-4 text-center <%- turn ? 'bg-primary' : 'bg-secondary' %>"
       >
         <div class="card-body">
-          <% if (turn) { %>
-            <p class="text-light mb-0">Vous pouvez vous déplacer</p>
-          <% } else { %>
-            <p class="text-light mb-0">Veuillez patienter que l'autre joueur est joué.</p>
-          <% } %>
+          <p class="text-light mb-0 player-turn-on">Vous pouvez vous déplacer</p>
+          <p class="text-light mb-0 player-turn-off">Veuillez patienter que l'autre joueur ait joué.</p>
         </div
       </div>
     </div>
