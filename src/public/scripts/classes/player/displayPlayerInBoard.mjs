@@ -16,7 +16,7 @@ function positionContainsPlayer(position) {
 
 }
 
-function positionFits(position, blackSquares) {
+function positionFits(position, board) {
 	// Position must
 	// - not be black
 	// - not contain player
@@ -29,11 +29,11 @@ function positionFits(position, blackSquares) {
 	return true;
 }
 
-function displayPlayerInBoard(dimensions, blackSquares) {
+function displayPlayerInBoard(dimensions, board) {
   let randomPosition = {};
   do {
     randomPosition = getRandomPosition(dimensions);
-  } while (!positionFits(randomPosition, blackSquares))
+  } while (!positionFits(randomPosition, board))
 }
 
 export { displayPlayerInBoard };

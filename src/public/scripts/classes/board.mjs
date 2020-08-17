@@ -23,7 +23,11 @@ class Board {
 	}
 
 	getClassesOf(squarePosition) {
-		
+		console.log(squarePosition);
+	}
+
+	isSquareBlack() {
+
 	}
 }
 
