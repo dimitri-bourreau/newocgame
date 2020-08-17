@@ -6,15 +6,24 @@ class Board {
 		this.id = id;
 		this.dimensions = getBoardDimensions(this.id);
 		this.players = players;
+		this.blackSquares = [];
 	}
 
 	initGame() {
-		makeSomeSquaresBlack(this.dimensions);
+		this.blackSquares = makeSomeSquaresBlack(this.dimensions);
 		Object.keys(this.players).forEach((key) => {
 			const player = this.players[key];
 			player.insertDataInDom();
-			player.displayPlayerInBoard(this.dimensions);
+			player.displayPlayerInBoard(this.dimensions, this.blackSquares);
 		});
+	}
+
+	getBlackSquares() {
+		return this.blackSquares;
+	}
+
+	getClassesOf(squarePosition) {
+		
 	}
 }
 

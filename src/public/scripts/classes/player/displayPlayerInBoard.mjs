@@ -5,23 +5,35 @@ function getRandomPosition({ width, height }) {
   }
 }
 
-function isThereAnotherPlayerAround(position) {
+function positionIsAlreadyBlack(position, blackSquares) {
+	blackSquares.forEach(blackSquare => {
+		if (blackSquare === position) return true;
+	});
+	return false;
+}
+
+function positionContainsPlayer(position) {
 
 }
 
-function positionFits(position) {
+function positionFits(position, blackSquares) {
 	// Position must
 	// - not be black
 	// - not contain player
 	// - not be close to player
 	// - be in board
+	const squareIsBlack = positionIsAlreadyBlack(position, blackSquares);
+
+	if (squareIsBlack) return false;
+
+	return true;
 }
 
-function displayPlayerInBoard(dimensions) {
+function displayPlayerInBoard(dimensions, blackSquares) {
   let randomPosition = {};
   do {
     randomPosition = getRandomPosition(dimensions);
-  } while (!positionFits(randomPosition))
+  } while (!positionFits(randomPosition, blackSquares))
 }
 
 export { displayPlayerInBoard };

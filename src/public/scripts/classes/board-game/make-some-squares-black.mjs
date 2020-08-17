@@ -69,7 +69,7 @@ function makeSomeSquaresBlack(dimensions) {
     dimensions
   );
   setTheseSquaresBlack(blackSquareRefs);
-  return null;
+  return blackSquareRefs;
 }
 
 export { makeSomeSquaresBlack };
