@@ -5,10 +5,12 @@ function getRandomPosition({ width, height }) {
   }
 }
 
-function positionIsAlreadyBlack(position, blackSquares) {
-	blackSquares.forEach(blackSquare => {
-		if (blackSquare === position) return true;
-	});
+function positionIsAlreadyBlack(position, board) {
+	// const blackSquares = board.getBlackSquares();
+	// blackSquares.forEach(blackSquare => {
+		// if (blackSquare === position) return true;
+	// WATCH BOARD IS BLACK SQURES ALREADY
+	// });
 	return false;
 }
 
@@ -17,12 +19,14 @@ function positionContainsPlayer(position) {
 }
 
 function positionFits(position, board) {
+	const classes = board.getClassesOf(position);
+	console.log('classes : ', classes);
 	// Position must
 	// - not be black
 	// - not contain player
 	// - not be close to player
 	// - be in board
-	const squareIsBlack = positionIsAlreadyBlack(position, blackSquares);
+	const squareIsBlack = positionIsAlreadyBlack(position, board);
 
 	if (squareIsBlack) return false;
 
