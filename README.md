@@ -1,5 +1,15 @@
-# Jeu de plateau dirigé par l'exercice d'Openclassrooms
-Nouvelle version, plus humble et rapide à réaliser, du jeu de plateau demandé par l'exercice d'Openclassrooms.
+# Jeu de plateau réalisé dans le cadre de ma formation avec Openclassrooms
 
-## Notes
-```.env``` est commité pour des raisons propres à l'exercice.
+![Board game](./readme/board.png)
+
+Projet arrêté en cours pour :
+
+- Me concentrer sur des projets avec des technologies que je maîtrisai moins alors (React, Vue).
+- Mieux utiliser mon temps et apprendre plein de nouvelles choses !
+- Ne plus passer trop de temps sur des technologies que je maîtrise (Node, templates EJS, JavaScript).
+
+Vous pouvez regarder le repo pour voir un peu comment je me débrouille avec Node. 😊
+
+![Settings](./readme/settings.png)
+
+Vous pouvez changer la taille du _jeu de plateau_ dynamiquement.
